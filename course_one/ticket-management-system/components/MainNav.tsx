@@ -1,17 +1,15 @@
 import Link from "next/link";
 import React from "react";
+import ToggleMode from "./toggle-mode";
+import MainNavLinks from "./navbar-links";
 
 const MainNav = () => {
   return (
     <div className="flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        <Link href={"/"}>Dashboard</Link>
-        <Link href={"/tickets"}>Tickets</Link>
-        <Link href={"/users"}>Users</Link>
-      </div>
+      <MainNavLinks />
       <div className="flex items-center gap-2">
         <Link href={"/logout"}>Logout</Link>
-        <Link href="/">Dark</Link>
+        <ToggleMode />
       </div>
     </div>
   );
