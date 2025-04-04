@@ -17,7 +17,7 @@ const statusMap: Record<
 const StatusBadge = ({ status }: Props) => {
   return (
     <Badge
-      className={` ${statusMap[status].color} text-background hover:${statusMap[status].color}`}
+      className={`${statusMap[status].color} text-background hover:${statusMap[status].color}`}
     >
       {statusMap[status].label}
     </Badge>
