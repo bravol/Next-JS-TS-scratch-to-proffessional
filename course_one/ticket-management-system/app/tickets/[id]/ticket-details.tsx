@@ -12,6 +12,7 @@ import StatusBadge from "@/components/status_badge";
 import TicketPriority from "@/components/ticket-priority";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import ReactMarkDown from "react-markdown";
 
 interface Props {
   ticket: Ticket;
@@ -39,7 +40,9 @@ const TicketDetails: React.FC<Props> = ({ ticket }) => {
             })}
           </CardDescription>
         </CardHeader>
-        <CardContent>{ticket.description}</CardContent>
+        <CardContent className="prose dark:prose-invert">
+          <ReactMarkDown>{ticket.description}</ReactMarkDown>
+        </CardContent>
         <CardFooter>
           Updated:{" "}
           {ticket.updatedAt.toLocaleDateString("en-US", {
@@ -71,3 +74,7 @@ const TicketDetails: React.FC<Props> = ({ ticket }) => {
 };
 
 export default TicketDetails;
+
+// npm i @tailwindcss/typography for bold texts/words
+
+//npm i react-markdown
