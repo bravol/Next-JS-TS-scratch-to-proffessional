@@ -149,6 +149,7 @@ const TicketForm: React.FC<Props> = ({ ticket }) => {
           </Button>
         </form>
       </Form>
+      <p className="text-destructive">{error}</p>
     </div>
   );
 };
